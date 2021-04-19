@@ -24,10 +24,10 @@ def hello_world():
         infs = clf.predict([inputFeatures])[0]
         print(infs)
         if infs == 0:
-            msg = "Low Risk of Infection"
+            msg = "Low Risk of Infection."
 
         if infs == 1:
-            msg = "High Risk of Infection"
+            msg = "High Risk of Infection."
 
         return render_template("show.html", inf=infProb * 100, r=msg)
     return render_template("index.html")
